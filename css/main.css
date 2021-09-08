@@ -179,6 +179,7 @@ video {
 }
 .buttonLink:focus, .buttonLink:hover{
   background-color: transparent;
+  color: white;
 }
 
 /*
