@@ -97,10 +97,6 @@
         
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a href="../" class="navbar-item">
-                    Home
-                </a>
-
                 <a href="../welcome.html" class="navbar-item">
                     Welcome
                 </a>
@@ -142,24 +138,27 @@
             
             <div class="column is-one-third">
                 <h1 class="sm">Katelyn Hawley</h1>
-                <h2 class="sm">Stuck, 2021</h2>
-                <p><i>Game</i></p>
+                <h2 class="sm"><i>Stuck, 2021</i></h2>
+                <p>Game</p>
             </div>
 
             <div class="column is-two-thirds">
                 <p>
                     <i>Stuck</i> is an exploratory game with the objective of guiding a small seedling on an introspective journey out into the world, where they must face their personified negative feelings in order to better understand themselves. Taking inspiration from anti-role-playing games such as <i>Yume Nikki</i> and <i>Mother</i>, Stuck’s character interactions range from comical to bleak to overwhelming. As the player traverses a series of mental planes and abstract landscapes, they come to empathize with the seedling’s mindset and join in the quest for self-acceptance. 
-                </p>
-                <p>
-                    <a href="https://katehawley.format.com/">Katelyn Hawley</a> is a recent graduate from OCAD University's Expanded Animation program, originally from Halifax, Nova Scotia. Her game-based works explore how nonconventional characters move and interact with the world, blending fluid animation and surreal storytelling to leave a lasting impact on players.
+                    <br/><br/>
+                    <i>Best experienced on a laptop or desktop computer with audio enabled. Use keyboard to play; press ‘Enter’ to start. Click <a href="./game.html" aria-label="Play game 'Stuck' in fullscreen mode.">here</a> to play a full-screen version.</i>
                 </p>
 
-                <div class="gm4html5_div_class" id="gm4html5_div_id" style="width: 100%; max-width: 100%;">
+                <div class="gm4html5_div_class" id="gm4html5_div_id" style="width: 100%; max-width: 100%; margin-bottom: 1rem;">
                     <!-- Create the canvas element the game draws to -->
                     <canvas id="canvas" width="960" height="540" >
                              <p>Your browser doesn't support HTML5 canvas.</p>
                     </canvas>
                 </div>
+
+                <p>
+                    <a href="https://katehawley.format.com/">Katelyn Hawley</a> is a recent graduate from OCAD University's Expanded Animation program, originally from Halifax, Nova Scotia. Her game-based works explore how nonconventional characters move and interact with the world, blending fluid animation and surreal storytelling to leave a lasting impact on players.
+                </p>
 
             </div>
         </div>
@@ -171,6 +170,15 @@
     <script src="../js/main.js"></script>
     <!-- Run the game code -->
     <script type="text/javascript" src="html5game/Stuckproj.js?WKIZB=1924379431"></script>
+    <!-- <script>
+        window.onload = function(){
+            if (typeof window.orientation !== 'undefined') {
+                document.getElementById("gm4html5_div_id").style.display = 'none';
+            }else{
+                window.onload = GameMaker_Init;
+            } 
+        }
+    </script> -->
     <script>window.onload = GameMaker_Init;</script>
 </body>
 
