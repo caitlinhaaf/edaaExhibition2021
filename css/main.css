@@ -175,12 +175,17 @@ video {
   vertical-align: middle;
 }
 
-#vidOverlay, .vignette {
+#vidOverlay, #vidOverlayCont, .vignette {
   position: fixed;
   left: 0;
   top: 0;
   min-width: 100%;
   min-height: 100%;
+}
+#vidOverlayCont{
+  background-image: url("../assets/videoSplash.png");
+  background-position: center;
+  background-size: cover;
 }
 .vignette{
   background-color: black;

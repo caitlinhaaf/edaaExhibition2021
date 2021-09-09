@@ -31,9 +31,9 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body id="homeBody">
 
-  <div playsinline id="vidOverlayCont" style="z-index: -1;">
+  <div id="vidOverlayCont">
     <video autoplay muted loop id="vidOverlay">
       <source src="./assets/1_Silky Waterfalls_Khadija Aziz_GIF_2020.mov" type="video/mov">
       <source src="./assets/1_Silky Waterfalls_Khadija Aziz_GIF_2020.mp4" type="video/mp4">
@@ -63,9 +63,16 @@
     window.addEventListener ("DOMContentLoaded",handleWindowLoad);
     function handleWindowLoad ()
     {
+
         var Video = document.getElementById ( "vidOverlay" );
         var PlayButton = document.getElementById ( "vidControlBtn" );
         PlayButton.addEventListener ( "click", Play_Pause_Video ) ;
+
+        const isMobile = navigator.userAgentData.mobile;
+        if(isMobile){
+          Video.style.display="none";
+          PlayButton.style.display="none";
+        }
 
         function Play_Pause_Video ()
         {
