@@ -17,6 +17,11 @@
   <link rel="shortcut icon" type="image/png" href="./icon.png"/>
   <!-- Place favicon.ico in the root directory -->
 
+  <!-- bulma -->
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
@@ -42,16 +47,52 @@
     <img alt="EDAA logo" style="width: 100%;" src="./assets/EDAA_logo_fuscia.white-150-01_noMargins.png" />
     <h1 style="height: 0px; width: 0px; overflow: hidden;">2021 EDAA Exhibition</h1>
     <h2>2021 Exhibition</h2>
-    <h3 style="color: white; font-size: 1.5rem;">September 10 – October 2, 2021</h3>
-    <a class="buttonLink" href="./welcome.html">
-        Enter
-    </a>
+    <h3 class="sm" style="color: white;">September 10 – October 2, 2021</h3>
   </section>
 
+
+  <button id="vidControlBtn" aria-label="Pause/play background video">
+    <i class="fas fa-pause"></i>
+  </button>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    window.addEventListener ("DOMContentLoaded",handleWindowLoad);
+    function handleWindowLoad ()
+    {
+        var Video = document.getElementById ( "vidOverlay" );
+        var PlayButton = document.getElementById ( "vidControlBtn" );
+        PlayButton.addEventListener ( "click", Play_Pause_Video ) ;
+
+        function Play_Pause_Video ()
+        {
+            if (Video.paused === true)
+            {
+                Video.play();
+                PlayButton.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            else
+            {
+                Video.pause();
+                PlayButton.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        }
+    }
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75142794-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-75142794-1');
+  </script>
+
 </body>
 
 </html>
