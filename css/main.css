@@ -30,7 +30,8 @@ h1.sm{
   font-size: 2rem;
   margin-bottom: .5rem;
 }
-h2.sm{
+h2.sm,
+h3.sm{
   font-size: 1.25rem;
   margin: 0;
 }
@@ -178,12 +179,17 @@ video {
   vertical-align: middle;
 }
 
-#vidOverlay, .vignette {
+#vidOverlay, #vidOverlayCont, .vignette {
   position: fixed;
   left: 0;
   top: 0;
   min-width: 100%;
   min-height: 100%;
+}
+#vidOverlayCont{
+  background-image: url("../assets/videoSplash.png");
+  background-position: center;
+  background-size: cover;
 }
 .vignette{
   background-color: black;
