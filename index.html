@@ -68,8 +68,8 @@
         var PlayButton = document.getElementById ( "vidControlBtn" );
         PlayButton.addEventListener ( "click", Play_Pause_Video ) ;
 
-        const isMobile = navigator.userAgentData.mobile;
-        if(isMobile){
+        // const isMobile = navigator.userAgentData.mobile;
+        if (typeof window.orientation !== 'undefined'){
           Video.style.display="none";
           PlayButton.style.display="none";
         }
