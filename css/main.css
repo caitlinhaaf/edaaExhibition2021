@@ -109,8 +109,9 @@ body{
 #vidControlBtn{
   position: absolute;
     bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    left: 1rem;
     background-color: rgba(0, 0, 0, .3);
     border: 0px;
     padding: .5rem 1rem;
@@ -119,6 +120,7 @@ body{
     cursor: pointer;
     transition: all .3s ease-in-out;
     border: .25rem solid rgba(0, 0, 0, 0);
+    outline: 0px;
 }
 #vidControlBtn:focus, #vidControlBtn:hover{
   background-color: rgba(0, 0, 0, .5);

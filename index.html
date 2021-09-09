@@ -17,6 +17,11 @@
   <link rel="shortcut icon" type="image/png" href="./icon.png"/>
   <!-- Place favicon.ico in the root directory -->
 
+  <!-- bulma -->
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
@@ -47,7 +52,7 @@
 
 
   <button id="vidControlBtn" aria-label="Pause/play background video">
-    Pause Video
+    <i class="fas fa-pause"></i>
   </button>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
@@ -67,12 +72,12 @@
             if (Video.paused === true)
             {
                 Video.play();
-                PlayButton.innerHTML = "Pause Video";
+                PlayButton.innerHTML = '<i class="fas fa-pause"></i>';
             }
             else
             {
                 Video.pause();
-                PlayButton.innerHTML = "Play Video";
+                PlayButton.innerHTML = '<i class="fas fa-play"></i>';
             }
         }
     }
