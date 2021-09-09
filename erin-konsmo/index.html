@@ -27,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/easyzoom.css">
 </head>
 
 <body>
@@ -96,15 +95,12 @@
                 <p>
                     <i>Fish/Scale Cones</i> takes fish scale art into the digital realm. The time-intensive artform includes catching whitefish, processing the scales, then dyeing and organizing them into careful compositions—a practice that is based on relationships with the water, local First Nations and Métis fishers, and the fish themselves. Konsmo plays with the idea of ‘scale’ using macro photography, layering physical fish scales over top of digital images of enlarged scales to create traditional floral forms, prompting close attention to the intricate details of this important material.
                     <br/><br/>
-                    <i>Best viewed in full screen. Click on image to zoom in/out.</i>
+                    <i>Best viewed in full screen. Click on image to zoom in/out, or click <a href="./fullimage.html" aria-label="View full sized image">here</a> to view the original image.</i>
                 </p>
-                
-                <!-- <div class="easyzoom easyzoom--overlay"> 
-                    <a href="../assets/Erin Konsmo_FishConesLg.png"> 
-                        <img src="../assets/Erin Konsmo_FishConesSm.png" alt=""/> 
-                    </a> 
-                </div> -->
-                <img src="../assets/Erin Konsmo_FishConesSm.png" alt="A row of five pink floral forms made with individual fish scales, each set within a white fish scale cone in front of a purple fish scale background."/> 
+
+                <span class='zoom' id='zoomImg' style="display: block;">
+                    <img src="../assets/Erin Konsmo_FishConesLg.png" alt="A row of five pink floral forms made with individual fish scales, each set within a white fish scale cone in front of a purple fish scale background."/> 
+                </span>
 
                 <p style="margin-top: 2rem;">
                     <a href="https://www.erinkonsmo.com/">Erin Konsmo</a> is a Métis Prairie queer who grew up in central Alberta and is a member of the Métis Nation of Alberta. Their artistic practice currently focuses on fish scale art, an artform they were mentored into by Métis artist Jaime Morse. Erin is an advocate for the water, land and fish.
@@ -118,47 +114,21 @@
 
     <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="../js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="../js/easyzoom.js"></script>
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script src='..//js/jquery.zoom.js'></script>
 
     <script>
-        $(function(){
-            console.log("adding zoom...")
-            $('.easyzoom').easyZoom();
-        });
-        // $('.easyzoom').easyZoom({
-
-        //     // The text to display within the notice box while loading the zoom image.
-        //     loadingNotice: 'Loading image',
-
-        //     // The text to display within the notice box if an error occurs when loading the zoom image.
-        //     errorNotice: 'The image could not be loaded',
-
-        //     // The time (in milliseconds) to display the error notice.
-        //     errorDuration: 2500,
-
-        //     // Attribute to retrieve the zoom image URL from.
-        //     linkAttribute: 'href',
-
-        //     // Prevent clicks on the zoom image link.
-        //     preventClicks: true,
-
-        //     // Callback function to execute before the flyout is displayed.
-        //     beforeShow: $.noop,
-
-        //     // Callback function to execute before the flyout is removed.
-        //     beforeHide: $.noop,
-
-        //     // Callback function to execute when the flyout is displayed.
-        //     onShow: $.noop,
-
-        //     // Callback function to execute when the flyout is removed.
-        //     onHide: $.noop,
-
-        //     // Callback function to execute when the cursor is moved while over the image.
-        //     onMove: $.noop
-
-        // });
+        $(document).ready(function(){
+			$('#zoomImg').zoom({ on:'click' });	
+            
+            let allImages = document.querySelectorAll("img");
+            allImages.forEach((value)=>{
+                value.oncontextmenu = (e)=>{
+                    e.preventDefault();
+                }
+            })
+		});
     </script>
 </body>
 

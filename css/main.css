@@ -30,11 +30,7 @@ h1.sm{
   font-size: 2rem;
   margin-bottom: .5rem;
 }
-<<<<<<< HEAD
 h2.sm{
-=======
-h2.sm, h3.sm{
->>>>>>> 18d55cf464a6e6611a1ce997fe48d9dce43bd953
   font-size: 1.25rem;
   margin: 0;
 }
@@ -44,14 +40,6 @@ h1{
 h2, h3, h4, h5, h6{
   margin: 0 0 .5rem 0;
 }
-<<<<<<< HEAD
-=======
-@media screen and (max-width: 800px){
-  h1, h2, h3, h4, h5, h6{
-    font-size: 2rem;
-  }
-}
->>>>>>> 18d55cf464a6e6611a1ce997fe48d9dce43bd953
 
 p{
   margin-bottom: 1rem;
@@ -128,6 +116,7 @@ body{
     transition: all .3s ease-in-out;
     border: .25rem solid rgba(0, 0, 0, 0);
     outline: 0px;
+    color: white;
 }
 #vidControlBtn:focus, #vidControlBtn:hover{
   background-color: rgba(0, 0, 0, .5);
@@ -172,6 +161,14 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
+
+ img, canvas {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  pointer-events: none;
+}
 
 audio,
 canvas,
@@ -417,4 +414,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
