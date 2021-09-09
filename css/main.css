@@ -30,7 +30,7 @@ h1.sm{
   font-size: 2rem;
   margin-bottom: .5rem;
 }
-h2.sm{
+h2.sm, h3.sm{
   font-size: 1.25rem;
   margin: 0;
 }
@@ -39,6 +39,11 @@ h1{
 }
 h2, h3, h4, h5, h6{
   margin: 0 0 .5rem 0;
+}
+@media screen and (max-width: 800px){
+  h1, h2, h3, h4, h5, h6{
+    font-size: 2rem;
+  }
 }
 
 p{
@@ -99,6 +104,25 @@ body{
   .navbar > *, .navbar-item, .navbar-link{
     color: black;
   }
+}
+
+#vidControlBtn{
+  position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, .3);
+    border: 0px;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border: .25rem solid rgba(0, 0, 0, 0);
+}
+#vidControlBtn:focus, #vidControlBtn:hover{
+  background-color: rgba(0, 0, 0, .5);
+  border: .25rem solid black;
 }
 
 /*
