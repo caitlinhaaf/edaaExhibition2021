@@ -30,6 +30,11 @@ h1.sm{
   font-size: 2rem;
   margin-bottom: .5rem;
 }
+@media screen and (max-width: 800px){
+  h1, h2{
+    font-size: 2rem;
+  }
+}
 h2.sm,
 h3.sm{
   font-size: 1.25rem;
