@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Erin Konsmo | 2021 EDAA Exhibition</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="shortcut icon" type="image/png" href="../icon.png"/>
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- bulma -->
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="../assets/EDAA_logo_fuscia.white-150-01.png">
+            </a>
+        
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="../welcome.html" class="navbar-item">
+                    Welcome
+                </a>
+
+                <a href="../about.html" class="navbar-item">
+                    About
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable is-right">
+                    <a class="navbar-link">
+                        Exhibition
+                    </a>
+            
+                    <div class="navbar-dropdown">
+                        <a href="../aljumaine-gayle/" class="navbar-item">
+                            Aljumaine Gayle
+                        </a>
+                        <a href="../erin-konsmo/" class="navbar-item">
+                            Erin Konsmo
+                        </a>
+                        <a href="../katelyn-hawley/" class="navbar-item">
+                            Katelyn Hawley
+                        </a>
+                        <a href="../olivia-dreisinger/" class="navbar-item">
+                            Olivia Dreisinger
+                        </a>
+                        <a href="../shonee/" class="navbar-item">
+                            Shonee
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container is-widescreen">
+
+        <div class="columns">
+            
+            <div class="column is-one-third">
+                <h1 class="sm">Erin Konsmo</h1>
+                <h2 class="sm"><i>Fish/Scale Cones, 2020</i></h2>
+                <p>Image</p>
+            </div>
+
+            <div class="column is-two-thirds">
+                <p>
+                    <i>Fish/Scale Cones</i> takes fish scale art into the digital realm. The time-intensive artform includes catching whitefish, processing the scales, then dyeing and organizing them into careful compositions—a practice that is based on relationships with the water, local First Nations and Métis fishers, and the fish themselves. Konsmo plays with the idea of ‘scale’ using macro photography, layering physical fish scales over top of digital images of enlarged scales to create traditional floral forms, prompting close attention to the intricate details of this important material.
+                    <br/><br/>
+                    <i>Click on image to zoom in/out, or click <a href="./fullimage.html" aria-label="View full sized image in new tab" target="_blank">here</a> to view the original image.</i>
+                </p>
+
+                <span class='zoom' id='zoomImg' style="display: block;">
+                    <img src="../assets/Erin Konsmo_FishConesLg.png" alt="A row of five pink floral forms made with individual fish scales, each set within a white fish scale cone in front of a purple fish scale background."/> 
+                </span>
+
+                <p style="margin-top: 2rem;">
+                    <a href="https://www.erinkonsmo.com/" target="_blank">Erin Konsmo</a> is a Métis Prairie queer who grew up in central Alberta and is a member of the Métis Nation of Alberta. Their artistic practice currently focuses on fish scale art, an artform they were mentored into by Métis artist Jaime Morse. Erin is an advocate for the water, land and fish.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script src='..//js/jquery.zoom.js'></script>
+
+    <script>
+        $(document).ready(function(){
+			$('#zoomImg').zoom({ on:'click' });	
+            
+            let allImages = document.querySelectorAll("img");
+            allImages.forEach((value)=>{
+                value.oncontextmenu = (e)=>{
+                    e.preventDefault();
+                }
+            })
+		});
+    </script>
+</body>
+
+</html>

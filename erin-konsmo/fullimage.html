@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Erin Konsmo | Image | 2021 EDAA Exhibition</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="shortcut icon" type="image/png" href="../icon.png"/>
+  <!-- Place favicon.ico in the root directory -->
+  <style>
+      img {
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+            /* pointer-events: none; */
+        }
+  </style>
+</head>
+
+<body>
+    <img src="../assets/Erin Konsmo_FishConesLg.png" alt="A row of five pink floral forms made with individual fish scales, each set within a white fish scale cone in front of a purple fish scale background." onContextMenu="return false;"/> 
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script src='..//js/jquery.zoom.js'></script>
+
+    <script>
+        $(document).ready(function(){     
+            let allImages = document.querySelectorAll("img");
+            allImages.forEach((value)=>{
+                value.mousedown = (e)=>{
+                    e.preventDefault();
+                }
+            })
+		});
+    </script>
+</body>
+
+</html>
