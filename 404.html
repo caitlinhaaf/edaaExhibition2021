@@ -5,57 +5,88 @@
   <meta charset="utf-8">
   <title>Page Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
-
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
-
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
-    }
-  </style>
+   <!-- bulma -->
+   <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+   <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+   <meta name="theme-color" content="#ffffff">
+ 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
+
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="./assets/EDAA_logo_fuscia.white-150-01.png">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a href="./welcome.html" class="navbar-item">
+                Welcome
+            </a>
+
+            <a href="./about.html" class="navbar-item">
+                About
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable is-right">
+                <a class="navbar-link">
+                    Exhibition
+                </a>
+        
+                <div class="navbar-dropdown">
+                    <a href="./aljumaine-gayle/" class="navbar-item">
+                        Aljumaine Gayle
+                    </a>
+                    <a href="./erin-konsmo/" class="navbar-item">
+                        Erin Konsmo
+                    </a>
+                    <a href="./katelyn-hawley/" class="navbar-item">
+                        Katelyn Hawley
+                    </a>
+                    <a href="./olivia-dreisinger/" class="navbar-item">
+                        Olivia Dreisinger
+                    </a>
+                    <a href="./shonee/" class="navbar-item">
+                        Shonee
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <section class="container is-widescreen" style="max-width: 900px; margin: 0 auto;">
+    <h1>Page Not Found</h1>
+    <p>Sorry, but the page you were trying to view does not exist.</p>
+  </section>
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75142794-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-75142794-1');
+  </script>
 </body>
 
 </html>
