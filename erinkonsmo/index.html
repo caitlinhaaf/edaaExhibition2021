@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Olivia Dreisinger | 2021 EDAA Exhibition</title>
+  <title>Erin Konsmo | 2021 EDAA Exhibition</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -60,16 +60,16 @@
                     </a>
             
                     <div class="navbar-dropdown">
-                        <a href="../aljumaine-gayle/" class="navbar-item">
+                        <a href="../aljumainegayle/" class="navbar-item">
                             Aljumaine Gayle
                         </a>
-                        <a href="../erin-konsmo/" class="navbar-item">
+                        <a href="../erinkonsmo/" class="navbar-item">
                             Erin Konsmo
                         </a>
-                        <a href="../katelyn-hawley/" class="navbar-item">
+                        <a href="../katelynhawley/" class="navbar-item">
                             Katelyn Hawley
                         </a>
-                        <a href="../olivia-dreisinger/" class="navbar-item">
+                        <a href="../oliviadreisinger/" class="navbar-item">
                             Olivia Dreisinger
                         </a>
                         <a href="../shonee/" class="navbar-item">
@@ -86,23 +86,26 @@
         <div class="columns">
             
             <div class="column is-one-third">
-                <h1 class="sm">Olivia Dreisinger</h1>
-                <h2 class="sm"><i>disabled!, 2017</i></h2>
-                <p>Video, 41:04</p>
+                <h1 class="sm">Erin Konsmo</h1>
+                <h2 class="sm"><i>Fish/Scale Cones, 2020</i></h2>
+                <p>Image</p>
             </div>
 
             <div class="column is-two-thirds">
                 <p>
-                    <i>disabled!</i> is an experimental video documentary that examines the role of disability in fanfiction. Narrated through a fan-made avatar of River Tam from the television show <i>Firefly</i>—a non-visibly disabled character that serves as a stand-in for the artist’s own imperceptibly unwell body—viewers are taken on a tour of the many worlds of fanfiction. Paralleling the inherent inquisitiveness and ingenuity of the genre with the artist’s own quest for alternate ways of living, the work creates space to challenge and reimagine our understanding of disability.
+                    <i>Fish/Scale Cones</i> takes fish scale art into the digital realm. The time-intensive artform includes catching whitefish, processing the scales, then dyeing and organizing them into careful compositions—a practice that is based on relationships with the water, local First Nations and Métis fishers, and the fish themselves. Konsmo plays with the idea of ‘scale’ using macro photography, layering physical fish scales over top of digital images of enlarged scales to create traditional floral forms, prompting close attention to the intricate details of this important material.
                     <br/><br/>
-                    <i>Best viewed in full screen (four arrows to left of ‘Vimeo’ logo) with audio and/or closed captioning enabled.</i>
+                    <i>Click on image to zoom in/out, or click <a href="./fullimage.html" aria-label="View full sized image in new tab" target="_blank">here</a> to view the original image.</i>
                 </p>
-                
-                <iframe title="vimeo-player" style="margin-bottom: 2rem; width: 100%; min-height: 30rem;" src="https://player.vimeo.com/video/596122072?h=aa7e54e7f4&title=0&portrait=0&byline=0" frameborder="0" allowfullscreen></iframe>
 
-                <p>
-                    <a href="http://oliviadreisinger.com/" target="_blank">Olivia Dreisinger</a> is a disability scholar, filmmaker, and writer. Her own fluctuating abilities often dictates how she produces work—a process that regularly leads her to new and generative mediums to explore. She splits her time between Victoria and Vancouver, Canada.
+                <span class='zoom' id='zoomImg' style="display: block;">
+                    <img src="../assets/Erin Konsmo_FishConesLg.png" alt="A row of five pink floral forms made with individual fish scales, each set within a white fish scale cone in front of a purple fish scale background."/> 
+                </span>
+
+                <p style="margin-top: 2rem;">
+                    <a href="https://www.erinkonsmo.com/" target="_blank">Erin Konsmo</a> is a Métis Prairie queer who grew up in central Alberta and is a member of the Métis Nation of Alberta. Their artistic practice currently focuses on fish scale art, an artform they were mentored into by Métis artist Jaime Morse. Erin is an advocate for the water, land and fish.
                 </p>
+
             </div>
 
         </div>
@@ -110,8 +113,23 @@
     </section>
 
     <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script src='..//js/jquery.zoom.js'></script>
+
+    <script>
+        $(document).ready(function(){
+			$('#zoomImg').zoom({ on:'click' });	
+            
+            let allImages = document.querySelectorAll("img");
+            allImages.forEach((value)=>{
+                value.oncontextmenu = (e)=>{
+                    e.preventDefault();
+                }
+            })
+		});
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75142794-1"></script>
